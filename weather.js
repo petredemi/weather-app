@@ -5,7 +5,7 @@ const date = document.querySelector('div.date');
 const humidity = document.querySelector('div.humidity');
 const uvindex = document.querySelector('div.uv');
 const condition = document.querySelector('#condition');
-const img = document.querySelector('#status');
+const img = document.querySelector('.status');
 const arrea = document.querySelector('div.arrea');
 let loc = 'london';
 const btnsearch = document.querySelector('#lookfor');
@@ -40,7 +40,7 @@ async function getWeather(){
          uvindex.textContent = getData.current.uv
          condition.textContent = getData.current.condition.text
          arrea.textContent = getData.location.region + ', ' + getData.location.tz_id
-  //      img.src = response.current.condition.icon;
+         img.src = 'https:'+ getData.current.condition.icon;
          console.log(getData);
  }
  
