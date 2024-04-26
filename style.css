@@ -8,12 +8,15 @@
     flex-wrap: wrap;
     justify-content:center;
     width: auto;
+    background-color: steelblue;
 }
 .header{
     display: flex;
     flex-direction: column;
     font-weight: 100;
     align-items: center;
+    color: red;
+    text-shadow: 2px 2px 2px black;
 }
 .icon{
     border: 3px solid red;
@@ -116,5 +119,10 @@ button{
     font-weight: 700;
     padding: 20px;
     text-shadow: 1px 1px 2px black;
-
+}
+footer{
+    text-align: center;
+    background-color: lightsteelblue;
+    height: 30px;
+    padding-top: 5px;
 }
