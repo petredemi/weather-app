@@ -81,7 +81,13 @@ weatherToday();
         if (inputLocation.value == '')return;
         loc = inputLocation.value;
         weatherToday();
-    })
+    });
     inputLocation.addEventListener('click', (e) => {
         inputLocation.value = '';
-    })
+    });
+    inputLocation.addEventListener('keypress', function(event){
+        if (event.key === 'Enter'){
+            event.preventDefault();
+            document.getElementById('lookfor').click();
+        }
+    });
