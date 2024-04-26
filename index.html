@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="weather.js" defer></script>
+
+    <title>weather</title>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+             <h1>Weather - App</h1>
+             <img src="./icons/008-4.png" alt="">
+             <img src="#"  alt="weather icon" id="status">
+        </div>
+            <div class="blok">
+              <div class="search">
+                    <label for="location">Location</label>
+                    <input type="text" id="location">
+                    <button type="submit" id="lookfor">
+                      <img src="./simbols/search.svg" alt="search simbol">
+                    </button>
+              </div>
+              <div class="weather-data">
+                <div id="region">
+                    <div>Region:</div>
+                    <div class="arrea"></div>
+                </div>
+                  <div class="temperature">
+                      <div class="date"></div>
+                      <div id="temp"></div>
+                      <div id="condition"></div>
+
+                      </div>
+                  <div class="wind-humidity">
+                        <div>
+                           <p>Max wind  km/h</p>
+                           <div class="wind"></div>
+                        </div>
+                        <div>
+                           <p>humidity</p>
+                           <div class="humidity"></div>
+                        </div>
+                  </div>
+                  <div class="uv-index">
+                      <p>Max UV index</p>
+                      <div class="uv"></div>
+                  </div>
+                  <div class="sunrise-sunset">
+                      <p>Sunrise</p>
+                      <div class="sunrise">5:00</div>
+                      <p>Sunset</p>
+                      <div class="sunset">19:00</div>
+
+                  </div>
+            </div>
+        </div>  
+    </div>
+    
+</body>
+</html>
+

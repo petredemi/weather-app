@@ -1,0 +1,106 @@
+*{
+    border: 1px solid red;
+    margin: 2px;
+}
+
+.content{
+    display: flex;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: auto;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.search{
+    display: flex;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: darkcyan;
+}
+input{
+    display: block;
+    width: 250px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+input:first-letter{
+    color: red;
+}
+label{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+button{
+    border: none;
+    background-color: rgba(228, 41, 41, 0);
+}
+.weather-data{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 50px 180px 180px;
+    gap: 20px;
+    background-color: bisque;
+}
+.arrea{
+    width: 200px;
+}
+.weather-data > div{
+    border: 2px solid black;
+    border-radius: 6px;
+    background:linear-gradient(20deg, grey,white, grey, white);
+    box-shadow: 4px 4px 4px black;
+    display: block;
+    padding: 8px;
+}
+#region{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-auto-rows:auto;
+    height: 30px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.weather-data p{
+    margin-bottom: 1px;
+    margin-top: 20px;
+}
+#temp{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: rgb(255, 230, 0);
+    text-shadow: 2px 2px 2px black;
+    font-weight: 700;
+
+}
+.wind-humidity > div > div{
+    font-size: 1.6rem;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black;
+}
+.uv{
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    font-weight: 700;
+    padding: 20px;
+    text-shadow: 1px 1px 2px black;
+
+}
