@@ -1,5 +1,4 @@
 *{
-    border: 1px solid red;
     margin: 2px;
 }
 
@@ -16,6 +15,19 @@
     font-weight: 100;
     align-items: center;
 }
+.icon{
+    border: 3px solid red;
+    width: 180px;
+    height: 140px;
+    border-radius: 50% ;
+    background-color:lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px black;
+    border-style:dotted;
+
+}
 .search{
     display: flex;
     padding: 5px;
@@ -27,7 +39,7 @@
 input{
     display: block;
     width: 250px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
 }

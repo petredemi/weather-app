@@ -8,7 +8,7 @@ const condition = document.querySelector('#condition');
 const img = document.querySelector('.status');
 const arrea = document.querySelector('div.arrea');
 let loc = JSON.parse(localStorage.getItem('weather'));
-;
+
 const btnsearch = document.querySelector('#lookfor');
 let inputLocation = document.querySelector('#location');
 inputLocation.value = loc;
@@ -32,26 +32,55 @@ inputLocation.value = loc;
 //
 //}
 async function getWeather(){
-        let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=69b808bac1c14633a67231851242404&q=${loc}`,{mode:'cors'})
-        let getData = await response.json()
-   // await Promise.reject(new Error('woops'))
-         temp.textContent = getData.current.temp_c + '  ℃';
-         wind.textContent = getData.current.wind_kph;
-         date.textContent = getData.location.localtime
-         humidity.textContent = getData.current.humidity
-         uvindex.textContent = getData.current.uv
-         condition.textContent = getData.current.condition.text
-         arrea.textContent = getData.location.region + ', ' + getData.location.tz_id
-         img.src = 'https:'+ getData.current.condition.icon;
-         console.log(getData);
- }
- 
+    try{
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=69b808bac1c14633a67231851242404&q=${loc}`,{mode:'cors'});
+        const getData = await response.json();
+        if (!response.ok){
+            throw new Error('did not find location');
+        }
+        console.log(getData);
+        return getData;
+        
+        } catch(error){ 
+           throw error;
+        }
+    }
+function weatherToday(){
     getWeather()
+        .then(getData =>{
+            let name = getData.location.name.toLowerCase()
+            temp.textContent = getData.current.temp_c + '  ℃';
+            wind.textContent = getData.current.wind_kph;
+            date.textContent = getData.location.localtime
+            humidity.textContent = getData.current.humidity
+            uvindex.textContent = getData.current.uv
+            condition.textContent = getData.current.condition.text
+            arrea.textContent = getData.location.region + ', ' + getData.location.tz_id
+            img.src = 'https:'+ getData.current.condition.icon;
+            localStorage.setItem('weather', JSON.stringify(inputLocation.value));
+            console.log(getData);
+             console.log(name)  
+    })
+        .catch(error => {
+            console.log(error);
+            inputLocation.value = error.message;
+            console.log(error.message);
+            temp.textContent = 'temp';                                       
+            wind.textContent = '';  
+            date.textContent = 'local Time';
+            humidity.textContent = '';        
+            uvindex.textContent = '';
+            condition.textContent = 'weather conditions';
+            arrea.textContent = '';
+            img.src = 'https:'
+        });
+}
+weatherToday();
+
     btnsearch.addEventListener('click', (e) => {
         if (inputLocation.value == '')return;
         loc = inputLocation.value;
-        localStorage.setItem('weather', JSON.stringify(inputLocation.value));
-        getWeather();
+        weatherToday();
     })
     inputLocation.addEventListener('click', (e) => {
         inputLocation.value = '';
