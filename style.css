@@ -13,6 +13,7 @@
 .header{
     display: flex;
     flex-direction: column;
+    font-weight: 100;
 }
 .search{
     display: flex;

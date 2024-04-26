@@ -39,7 +39,7 @@ async function getWeather(){
          humidity.textContent = getData.current.humidity
          uvindex.textContent = getData.current.uv
          condition.textContent = getData.current.condition.text
-         arrea.textContent = getData.location.region
+         arrea.textContent = getData.location.region + ', ' + getData.location.tz_id
   //      img.src = response.current.condition.icon;
          console.log(getData);
  }
