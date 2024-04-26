@@ -7,10 +7,12 @@ const uvindex = document.querySelector('div.uv');
 const condition = document.querySelector('#condition');
 const img = document.querySelector('.status');
 const arrea = document.querySelector('div.arrea');
-let loc = 'london';
+let loc = JSON.parse(localStorage.getItem('weather'));
+;
 const btnsearch = document.querySelector('#lookfor');
 let inputLocation = document.querySelector('#location');
 inputLocation.value = loc;
+
 
 // function getWeather(){
 //   fetch(`https://api.weatherapi.com/v1/current.json?key=69b808bac1c14633a67231851242404&q=${loc}`,{mode:'cors'})
@@ -46,10 +48,9 @@ async function getWeather(){
  
     getWeather()
     btnsearch.addEventListener('click', (e) => {
-        if (inputLocation.value == ''){
-            inputLocation.value = 'london';
-        }
+        if (inputLocation.value == '')return;
         loc = inputLocation.value;
+        localStorage.setItem('weather', JSON.stringify(inputLocation.value));
         getWeather();
     })
     inputLocation.addEventListener('click', (e) => {
