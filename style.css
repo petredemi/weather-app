@@ -19,19 +19,47 @@ h1{
     color: red;
 
 }
+.emoji{
+    position: relative;
+    animation-name: left-right1;
+    animation-duration: 4s;
+
+}
+
+@keyframes left-right1{
+    0%   {left:0px; top:0px;}
+    25%  {left:100px; top:0px;}
+    50%  {left:-100px; top:0px;}
+    75%  {left:100px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+
+
 .icon{
-    border: 6px solid red;
-    width: 180px;
-    height: 140px;
+    border: 4px solid red;
+    width: 170px;
+    height: 100px;
     border-radius: 50% ;
-    background-color:lightyellow;
+    background-color:aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 4px 4px 4px black;
     border-style: ridge;
 
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
 }
+
+@keyframes example {
+    0%   {background-color:rgb(255, 153, 153); left:0px; top:0px;}
+    25%  {background-color:rgb(255, 255, 97); left:-100px; top:0px;}
+    50%  {background-color:rgb(126, 126, 255); left:100px; top:0px;}
+    75%  {background-color:rgb(163, 255, 163); left:-100px; top:0px;}
+    100% {background-color:rgb(251, 130, 130); left:0px; top:0px;}
+  }
+
 .search{
     display: flex;
     padding: 5px;
