@@ -13,19 +13,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 h1{
     text-shadow: 2px 2px 2px black;
     color: red;
-
 }
 .emoji{
     position: relative;
     animation-name: left-right1;
     animation-duration: 4s;
-
 }
-
+.emoji-item{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 @keyframes left-right1{
     0%   {left:0px; top:0px;}
     25%  {left:100px; top:0px;}
@@ -50,14 +53,15 @@ h1{
     position: relative;
     animation-name: example;
     animation-duration: 4s;
+    animation-iteration-count: 3;
 }
-
 @keyframes example {
-    0%   {background-color:rgb(255, 153, 153); left:0px; top:0px;}
+    0%   {background-color:rgb(252, 243, 243); left:0px; top:0px;}
     25%  {background-color:rgb(255, 255, 97); left:-100px; top:0px;}
     50%  {background-color:rgb(126, 126, 255); left:100px; top:0px;}
     75%  {background-color:rgb(163, 255, 163); left:-100px; top:0px;}
-    100% {background-color:rgb(251, 130, 130); left:0px; top:0px;}
+    100% {background-color:rgb(253, 249, 249); left:0px; top:0px;}
+    
   }
 
 .search{
@@ -120,14 +124,14 @@ button{
 
 .weather-data p{
     margin-bottom: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 1.1rem;
 }
 #temp{
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 12px;
-    margin-top: 15px;
+    margin-top: 25px;
     color: rgb(255, 230, 0);
     text-shadow: 2px 2px 2px black;
     font-weight: 700;
@@ -135,23 +139,33 @@ button{
 }
 .date, #condition{
     color: red;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-shadow: 1px 1px 2px black;
 
 }
+.date{
+    margin-bottom: 20px;
+}
 .wind-humidity > div > div{
-    font-size: 1.6rem;
     text-align: center;
     color: red;
     font-weight: 700;
     text-shadow: 1px 1px 2px black;
 }
+.wind{
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+.humidity{
+    font-size: 1.8rem;
+}
 .uv{
     text-align: center;
-    font-size: 2.2rem;
+    margin-top: 10px;
+    font-size: 3rem;
     color: blue;
     font-weight: 700;
-    padding: 20px;
+    padding: 10px;
     text-shadow: 1px 1px 2px black;
 }
 footer{

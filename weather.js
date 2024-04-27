@@ -51,7 +51,15 @@ function weatherToday(){
             let name = getData.location.name.toLowerCase()
             temp.textContent = getData.current.temp_c + '  ℃';
             wind.textContent = getData.current.wind_kph + ' km/h';
-            date.textContent = getData.location.localtime;
+            let x = new Date(getData.location.localtime);
+            let y = x.toUTCString();
+            // let y = x.split();
+            
+            console.log(y);
+           // console.log(y.reverse());
+            date.textContent = y;
+ //           date.textContent = getData.location.localtime;
+
             humidity.textContent = getData.current.humidity + '  %';
             uvindex.textContent = getData.current.uv;
             condition.textContent = getData.current.condition.text;
