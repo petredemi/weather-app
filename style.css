@@ -20,7 +20,7 @@ h1{
 
 }
 .icon{
-    border: 3px solid red;
+    border: 6px solid red;
     width: 180px;
     height: 140px;
     border-radius: 50% ;
@@ -29,7 +29,7 @@ h1{
     justify-content: center;
     align-items: center;
     box-shadow: 4px 4px 4px black;
-    border-style:dotted;
+    border-style: ridge;
 
 }
 .search{
@@ -119,7 +119,7 @@ button{
 }
 .uv{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: blue;
     font-weight: 700;
     padding: 20px;
