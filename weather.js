@@ -1,7 +1,7 @@
 
 let temp = document.querySelector('#temp');
 const wind = document.querySelector('div.wind');
-const date = document.querySelector('div.date');
+let date = document.querySelector('div.date');
 const humidity = document.querySelector('div.humidity');
 const uvindex = document.querySelector('div.uv');
 const condition = document.querySelector('#condition');
@@ -50,33 +50,32 @@ function weatherToday(){
         .then(getData =>{
             let name = getData.location.name.toLowerCase()
             temp.textContent = getData.current.temp_c + '  ℃';
-            wind.textContent = getData.current.wind_kph;
-            date.textContent = getData.location.localtime
-            humidity.textContent = getData.current.humidity
-            uvindex.textContent = getData.current.uv
-            condition.textContent = getData.current.condition.text
+            wind.textContent = getData.current.wind_kph + ' km/h';
+            date.textContent = getData.location.localtime;
+            humidity.textContent = getData.current.humidity + '  %';
+            uvindex.textContent = getData.current.uv;
+            condition.textContent = getData.current.condition.text;
             arrea.textContent = getData.location.region + ', ' + getData.location.tz_id
             img.src = 'https:'+ getData.current.condition.icon;
             localStorage.setItem('weather', JSON.stringify(inputLocation.value));
             console.log(getData);
-             console.log(name)  
+            console.log(name);  
     })
         .catch(error => {
             console.log(error);
             inputLocation.value = error.message;
             console.log(error.message);
-            temp.textContent = 'temp';                                       
-            wind.textContent = '';  
+            temp.textContent = 'temp ℃';                                       
+            wind.textContent = ' value km/h';  
             date.textContent = 'local Time';
-            humidity.textContent = '';        
+            humidity.textContent = 'value %';        
             uvindex.textContent = '';
             condition.textContent = 'weather conditions';
-            arrea.textContent = '';
+            arrea.textContent = 'no location';
             img.src = 'https:'
         });
 }
 weatherToday();
-
     btnsearch.addEventListener('click', (e) => {
         if (inputLocation.value == '')return;
         loc = inputLocation.value;

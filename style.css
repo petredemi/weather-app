@@ -1,7 +1,6 @@
 *{
     margin: 2px;
 }
-
 .content{
     display: flex;
     align-items:flex-start;
@@ -13,10 +12,12 @@
 .header{
     display: flex;
     flex-direction: column;
-    font-weight: 100;
     align-items: center;
-    color: red;
+}
+h1{
     text-shadow: 2px 2px 2px black;
+    color: red;
+
 }
 .icon{
     border: 3px solid red;
@@ -45,9 +46,6 @@ input{
     font-size: 1.2rem;
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
-}
-input:first-letter{
-    color: red;
 }
 label{
     display: flex;
@@ -94,15 +92,22 @@ button{
 .weather-data p{
     margin-bottom: 1px;
     margin-top: 20px;
+    font-size: 1.1rem;
 }
 #temp{
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 12px;
+    margin-top: 10px;
     color: rgb(255, 230, 0);
     text-shadow: 2px 2px 2px black;
     font-weight: 700;
+
+}
+.date, #condition{
+    color: red;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px black;
 
 }
 .wind-humidity > div > div{
