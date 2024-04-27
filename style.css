@@ -129,7 +129,7 @@ button{
 }
 #temp{
     text-align: center;
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     margin-bottom: 12px;
     margin-top: 22px;
     color: rgb(255, 230, 0);
@@ -154,10 +154,10 @@ button{
 }
 .wind{
     padding-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 .humidity{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 .uv{
     text-align: center;

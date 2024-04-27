@@ -73,12 +73,12 @@ function weatherToday(){
             console.log(error);
             inputLocation.value = error.message;
             console.log(error.message);
-            temp.textContent = 'temp ℃';                                       
-            wind.textContent = ' value km/h';  
-            date.textContent = 'local Time';
-            humidity.textContent = 'value %';        
+            temp.textContent = '℃';                                       
+            wind.textContent = 'no data km/h';  
+            date.textContent = 'no data';
+            humidity.textContent = 'no data %';        
             uvindex.textContent = '';
-            condition.textContent = 'weather conditions';
+            condition.textContent = 'no data';
             arrea.textContent = 'no location';
             img.src = 'https:'
         });
