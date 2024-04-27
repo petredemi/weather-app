@@ -66,7 +66,8 @@ button{
     background-color: bisque;
 }
 .arrea{
-    width: 200px;
+    width: 250px;
+    text-align: left;
 }
 .weather-data > div{
     border: 2px solid black;
@@ -74,7 +75,7 @@ button{
     background:linear-gradient(20deg, grey,white, grey, white);
     box-shadow: 4px 4px 4px black;
     display: block;
-    padding: 8px;
+    padding: 2px;
 }
 #region{
     grid-column-start: 1;
@@ -98,7 +99,7 @@ button{
     text-align: center;
     font-size: 3rem;
     margin-bottom: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
     color: rgb(255, 230, 0);
     text-shadow: 2px 2px 2px black;
     font-weight: 700;
