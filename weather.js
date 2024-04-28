@@ -53,24 +53,31 @@ function weatherToday(){
             let name = getData.location.name.toLowerCase()
             temp.textContent = getData.current.temp_c + '  ℃';
             wind.textContent = getData.current.wind_kph + ' km/h';
-            let x = new Date(getData.location.localtime);
+            let locTime = getData.location.localtime;
+            let originalString = locTime;
+            let addZero = '0';
+            let position = -4
+            let newString = originalString.slice(0, position)+ addZero + originalString.slice(position);
+            console.log(locTime.length);
+
+            let x = new Date(locTime);
+            if (locTime.length < 16){ x = new Date(newString)}          
             console.log(typeof(x));
             let m = x.getMonth();
             let month = months[m];
             let y = x.getFullYear();
+            let d = x.getDate();
+            let h = x.getHours();
+            let min = x.getMinutes();
             function dateFormat(){        
-                    let d = x.getDate();
-                    let h = x.getHours();
-                    let min = x.getMinutes();
-              //      if( d < 10){ d = '0' + d;}
-                //    if( h < 10) { h = '0' + h}
+                 //   if( d < 10){ d = '0' + d;}
+                 //   if( h < 10) { h = '0' + h}
                     if ( min < 10){ min = '0' + min}
                     console.log(min);
                     date.textContent = d + ' ' + month + ' ' + y ;
                     hour.textContent = h + ':' + min + '  o\'clock';
             }
             dateFormat();
-
             humidity.textContent = getData.current.humidity + '  %';
             uvindex.textContent = getData.current.uv;
             condition.textContent = getData.current.condition.text;
