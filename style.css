@@ -7,7 +7,8 @@
     flex-wrap: wrap;
     justify-content:center;
     width: auto;
-    background-color: steelblue;
+    background:url(./pictures/desktop1.jpg);
+
 }
 .header{
     display: flex;
@@ -17,6 +18,9 @@
 h1{
     text-shadow: 2px 2px 2px black;
     color: red;
+}
+.logo{
+    background: rgba(0, 0, 0, 0.252);
 }
 .emoji{
     position: relative;
@@ -35,24 +39,34 @@ h1{
     100% {left:0px; top:0px;}
   }
 
-
+/*
 .icon{
-    border: 4px solid red;
     width: 170px;
     height: 100px;
-    border-radius: 50% ;
-    background-color:aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 4px black;
-    border-style: ridge;
 
+}*/
+.status{
+    background: rgba(0, 0, 0, 0.298);
+    box-shadow: 4px 4px 4px black;
     position: relative;
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: 4;
+    border-radius: 50%;
+
 }
+@keyframes example {
+    0%   { left:0px; top:0px;}
+    25%  { left:-100px; top:0px;}
+    50%  { left:100px; top:0px;}
+    75%  { left:-100px; top:0px;}
+    100% { left:0px; top:0px;}
+}
+
+/*
 @keyframes example {
     0%   {background-color:rgb(252, 243, 243); left:0px; top:0px;}
     25%  {background-color:rgb(255, 255, 97); left:-100px; top:0px;}
@@ -60,7 +74,7 @@ h1{
     75%  {background-color:rgb(163, 255, 163); left:-100px; top:0px;}
     100% {background-color:rgb(253, 249, 249); left:0px; top:0px;}
     
-  }
+  }*/
 
 .search{
     display: flex;

@@ -87,6 +87,7 @@ function weatherToday(){
             temp.textContent = '℃';                                       
             wind.textContent = 'no data km/h';  
             date.textContent = 'no data';
+            hour.textContent = 'no data';
             humidity.textContent = 'no data %';        
             uvindex.textContent = '';
             condition.textContent = 'no data';
