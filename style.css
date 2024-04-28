@@ -29,9 +29,9 @@ h1{
 }
 @keyframes left-right1{
     0%   {left:0px; top:0px;}
-    25%  {left:100px; top:0px;}
-    50%  {left:-100px; top:0px;}
-    75%  {left:100px; top:0px;}
+    25%  {left:150px; top:0px;}
+    50%  {left:-60px; top:0px;}
+    75%  {left:170px; top:0px;}
     100% {left:0px; top:0px;}
   }
 
@@ -51,7 +51,7 @@ h1{
     position: relative;
     animation-name: example;
     animation-duration: 4s;
-    animation-iteration-count: 3;
+    animation-iteration-count: 4;
 }
 @keyframes example {
     0%   {background-color:rgb(252, 243, 243); left:0px; top:0px;}
@@ -105,7 +105,7 @@ button{
     background:linear-gradient(20deg, grey,white, grey, white);
     box-shadow: 4px 4px 4px black;
     display: block;
-    padding: 2px;
+    padding: 4px;
 }
 #region{
     grid-column-start: 1;
@@ -121,7 +121,7 @@ button{
 
 
 .weather-data p{
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     margin-top: 10px;
     font-size: 1.1rem;
 }

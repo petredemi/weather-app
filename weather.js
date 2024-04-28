@@ -62,8 +62,8 @@ function weatherToday(){
                     let d = x.getDate();
                     let h = x.getHours();
                     let min = x.getMinutes();
-                    if( d < 10){ d = '0' + d;}
-                    if( h < 10) { h = '0' + h}
+              //      if( d < 10){ d = '0' + d;}
+                //    if( h < 10) { h = '0' + h}
                     if ( min < 10){ min = '0' + min}
                     console.log(min);
                     date.textContent = d + ' ' + month + ' ' + y ;
