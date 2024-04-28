@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content:center;
     width: auto;
-    background:url(./pictures/desktop1.png);
+    background:url(./pictures/sun3desktop.jpg);
 
 }
 .header{
@@ -20,7 +20,7 @@ h1{
     color: red;
 }
 .logo{
-    background: rgba(0, 0, 0, 0.252);
+    background: rgba(0, 0, 0, 0.379);
 }
 .emoji{
     position: relative;
