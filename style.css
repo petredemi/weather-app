@@ -24,7 +24,7 @@ h1{
 .emoji{
     position: relative;
     animation-name: left-right1;
-    animation-duration: 4s;
+    animation-duration: 6s;
 }
 .emoji-item{
     display: flex;
@@ -37,7 +37,6 @@ h1{
     75%  {left:170px; top:0px;}
     100% {left:0px; top:0px;}
   }
-
 /*
 .icon{
     width: 170px;
@@ -52,10 +51,9 @@ h1{
     box-shadow: 4px 4px 4px black;
     position: relative;
     animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: 4;
+    animation-duration: 8s;
+    animation-iteration-count: 2;
     border-radius: 50%;
-
 }
 @keyframes example {
     0%   { left:0px; top:0px;}
@@ -64,7 +62,6 @@ h1{
     75%  { left:-100px; top:0px;}
     100% { left:0px; top:0px;}
 }
-
 /*
 @keyframes example {
     0%   {background-color:rgb(252, 243, 243); left:0px; top:0px;}
@@ -74,7 +71,6 @@ h1{
     100% {background-color:rgb(253, 249, 249); left:0px; top:0px;}
     
   }*/
-
 .search{
     display: flex;
     padding: 5px;
@@ -103,10 +99,11 @@ button{
 .weather-data{
     display: grid;
     padding: 10px;
-    grid-template-columns: 180px 180px;
-    grid-template-rows: 50px 180px 180px;
-    gap: 20px;
+    grid-template-columns: 183px 183px;
+    grid-template-rows: 50px 183px 183px;
+    gap: 15px;
     background-color: bisque;
+    background:linear-gradient(135deg, rgb(140, 139, 139),white, rgb(171, 170, 170), white, rgb(138, 137, 137));
 }
 .arrea{
     width: 250px;
@@ -114,11 +111,12 @@ button{
 }
 .weather-data > div{
     border: 2px solid black;
-    border-radius: 6px;
-    background:linear-gradient(20deg, grey,white, grey, white);
-    box-shadow: 4px 4px 4px black;
+    border-radius: 8px;
+    background:linear-gradient(20deg, grey,white, rgb(152, 151, 151), white);
+    box-shadow: 3px 3px 6px black;
     display: block;
     padding: 4px;
+    border-left: 8px solid darkorange;
 }
 #region{
     grid-column-start: 1;
