@@ -8,6 +8,8 @@ const condition = document.querySelector('#condition');
 const img = document.querySelector('.status');
 const arrea = document.querySelector('div.arrea');
 let loc = JSON.parse(localStorage.getItem('weather'));
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+const hour = document.querySelector('div.hour');
 
 const btnsearch = document.querySelector('#lookfor');
 let inputLocation = document.querySelector('#location');
@@ -52,13 +54,22 @@ function weatherToday(){
             temp.textContent = getData.current.temp_c + '  ℃';
             wind.textContent = getData.current.wind_kph + ' km/h';
             let x = new Date(getData.location.localtime);
-            let y = x.toUTCString();
-            // let y = x.split();
-            
-            console.log(y);
-           // console.log(y.reverse());
-            date.textContent = y;
- //           date.textContent = getData.location.localtime;
+            console.log(typeof(x));
+            let m = x.getMonth();
+            let month = months[m];
+            let y = x.getFullYear();
+            function dateFormat(){        
+                    let d = x.getDate();
+                    let h = x.getHours();
+                    let min = x.getMinutes();
+                    if( d < 10){ d = '0' + d;}
+                    if( h < 10) { h = '0' + h}
+                    if ( min < 10){ min = '0' + min}
+                    console.log(min);
+                    date.textContent = d + ' ' + month + ' ' + y ;
+                    hour.textContent = h + ':' + min + '  o\'clock';
+            }
+            dateFormat();
 
             humidity.textContent = getData.current.humidity + '  %';
             uvindex.textContent = getData.current.uv;
