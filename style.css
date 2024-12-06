@@ -1,96 +1,107 @@
+@font-face {
+    font-family: 'font-1';
+    src: url('./fonts/font-1.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-2';
+    src: url('./fonts/font-2.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-3';
+    src: url('./fonts/font-3.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-4';
+    src: 
+        url('./fonts/font-4.otf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-5';
+    src: 
+        url('./fonts/font-5.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-6';
+    src: 
+        url('./fonts/font-6.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
 *{
     margin: 2px;
 }
 .content{
-    display: flex;
-    align-items:flex-start;
-    flex-wrap: wrap;
-    justify-content:center;
+    display: block;
     width: auto;
-    background:url(./pictures/sun3desktop.jpg);
 }
 .header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 20px;
 }
 h1{
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
     color: red;
+    margin: auto;
+    font-family: font-3;
 }
 .logo{
     background: rgba(0, 0, 0, 0.379);
 }
 .emoji{
     position: relative;
-    animation-name: left-right1;
+    animation-name: emoji-item;
     animation-duration: 6s;
 }
 .emoji-item{
     display: flex;
     justify-content: center;
 }
-@keyframes left-right1{
-    0%   {left:0px; top:0px;}
-    25%  {left:150px; top:0px;}
-    50%  {left:-60px; top:0px;}
-    75%  {left:170px; top:0px;}
-    100% {left:0px; top:0px;}
-  }
-/*
-.icon{
-    width: 170px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}*/
+.block{
+    width: fit-content;
+    margin: auto;
+    background-color: rgba(13, 33, 28, 0.42);
+}
 .status{
-    background: rgba(0, 0, 0, 0.298);
     box-shadow: 4px 4px 4px black;
-    position: relative;
-    animation-name: example;
-    animation-duration: 8s;
-    animation-iteration-count: 2;
+    border: 1px solid black;
     border-radius: 50%;
+    margin: auto;
 }
-@keyframes example {
-    0%   { left:0px; top:0px;}
-    25%  { left:-100px; top:0px;}
-    50%  { left:100px; top:0px;}
-    75%  { left:-100px; top:0px;}
-    100% { left:0px; top:0px;}
+.im{
+    text-align: center;
 }
-/*
-@keyframes example {
-    0%   {background-color:rgb(252, 243, 243); left:0px; top:0px;}
-    25%  {background-color:rgb(255, 255, 97); left:-100px; top:0px;}
-    50%  {background-color:rgb(126, 126, 255); left:100px; top:0px;}
-    75%  {background-color:rgb(163, 255, 163); left:-100px; top:0px;}
-    100% {background-color:rgb(253, 249, 249); left:0px; top:0px;}
-    
-  }*/
 .search{
     display: flex;
     padding: 5px;
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
     text-align: center;
-    background-color: darkcyan;
+    background-color: rgb(24, 235, 235);
 }
 input{
     display: block;
     width: 250px;
     font-size: 1.2rem;
-    font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 label{
     display: flex;
     text-align: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 button{
     border: none;
@@ -102,21 +113,21 @@ button{
     grid-template-columns: 183px 183px;
     grid-template-rows: 50px 183px 183px;
     gap: 15px;
-    background-color: bisque;
-    background:linear-gradient(135deg, rgb(140, 139, 139),white, rgb(171, 170, 170), white, rgb(138, 137, 137));
+    color: white;
+    font-size: 1rem;
 }
 .arrea{
     width: 250px;
     text-align: left;
 }
 .weather-data > div{
-    border: 2px solid black;
+    border: 0px solid black;
     border-radius: 8px;
-    background:linear-gradient(20deg, grey,white, rgb(152, 151, 151), white);
-    box-shadow: 3px 3px 6px black;
+    box-shadow: 0px 0px 10px black;
     display: block;
     padding: 4px;
     border-left: 8px solid darkorange;
+    background-color:teal;
 }
 #region{
     grid-column-start: 1;
@@ -134,20 +145,18 @@ button{
 .weather-data p{
     margin-bottom: 0px;
     margin-top: 10px;
-    font-size: 1.1rem;
 }
 #temp{
     text-align: center;
-    font-size: 3.1rem;
+    font-size: 1.8rem;
     margin-bottom: 12px;
     margin-top: 22px;
-    color: rgb(255, 230, 0);
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 2px black;
     font-weight: 700;
 
 }
 .date, #condition, .hour{
-    color: red;
+    color: rgb(251, 248, 248);
     font-size: 1.2rem;
     text-shadow: 1px 1px 2px black;
 
@@ -158,29 +167,27 @@ button{
 
 .wind-humidity > div > div{
     text-align: center;
-    color: red;
-    font-weight: 700;
+    font-weight: 500;
     text-shadow: 1px 1px 2px black;
 }
 .wind{
     padding-bottom: 10px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 .humidity{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 .uv{
     text-align: center;
     margin-top: 10px;
-    font-size: 3rem;
-    color: blue;
+    font-size: 2rem;
     font-weight: 700;
     padding: 10px;
     text-shadow: 1px 1px 2px black;
 }
 footer{
     text-align: center;
-    background-color: lightsteelblue;
+    background-color: rgb(202, 198, 198);
     height: 30px;
     padding-top: 5px;
 }

@@ -6,16 +6,14 @@ const humidity = document.querySelector('div.humidity');
 const uvindex = document.querySelector('div.uv');
 const condition = document.querySelector('#condition');
 const img = document.querySelector('.status');
+
 const arrea = document.querySelector('div.arrea');
 let loc = JSON.parse(localStorage.getItem('weather'));
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 const hour = document.querySelector('div.hour');
-
 const btnsearch = document.querySelector('#lookfor');
 let inputLocation = document.querySelector('#location');
 inputLocation.value = loc;
-
-
 // function getWeather(){
 //   fetch(`https://api.weatherapi.com/v1/current.json?key=69b808bac1c14633a67231851242404&q=${loc}`,{mode:'cors'})
 //       .then(function(response){
@@ -31,7 +29,6 @@ inputLocation.value = loc;
 //           condition.textContent = response.current.condition.text;
 //         //  img.src = response.current.condition.icon;
 //       })
-//
 //}
 async function getWeather(){
     try{
@@ -59,7 +56,6 @@ function weatherToday(){
             let position = -4
             let newString = originalString.slice(0, position)+ addZero + originalString.slice(position);
             console.log(locTime.length);
-
             let x = new Date(locTime);
             if (locTime.length < 16){ x = new Date(newString)}          
             console.log(typeof(x));
