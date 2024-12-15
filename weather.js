@@ -99,6 +99,7 @@ function weatherToday(){
         });
 }
 weatherToday();
+setInterval(weatherToday, 600000)
     btnsearch.addEventListener('click', (e) => {
         if (inputLocation.value == '')return;
         loc = inputLocation.value;
